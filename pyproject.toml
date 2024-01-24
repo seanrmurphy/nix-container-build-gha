@@ -1,0 +1,32 @@
+[project]
+name = "flask-example"
+version = "0.1.0"
+description = ""
+authors = [
+  { name = "Mitchell Hashimoto", email = "<mitchell.hashimoto@gmail.com>" },
+]
+readme = "README.md"
+packages = [{include = "src"}]
+requires-python = ">=3.10"
+license = {text = "MIT"}
+dependencies = [
+    "Flask>=2.2.3",
+    #"pytorch>=2.0.0",
+    "torch>=2.0.0",
+    # "numpy>=1.26.3",
+    "jupyter>=1.0.0",
+    "beautifulsoup4",
+]
+
+[project.scripts]
+# we don't include src here because the packages directive above indicates that only content within the src file should be included
+app = 'app:main'
+
+# [[tool.pdm.source]]
+# url = "https://download.pytorch.org/whl/cpu"
+# verify_ssl = true
+# name = "torch"
+
+[build-system]
+requires = ["pdm-backend"]
+build-backend = "pdm.backend"
