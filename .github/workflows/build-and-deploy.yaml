@@ -18,5 +18,7 @@ jobs:
       - run: |
           scripts/build_and_push_image.sh
         env:
+          # this secret must be defined and available to the runner; it's assumed it
+          # has write priviliges on a docker registry
           DOCKER_ACCESS_TOKEN: ${{ secrets.DOCKER_ACCESS_TOKEN }}
         if: github.ref == 'refs/heads/main'
