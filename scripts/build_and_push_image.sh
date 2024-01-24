@@ -3,8 +3,8 @@
 
 set -eu
 
-OCI_ARCHIVE=$(nix-build --no-out-link -A packages.x86_64-linux.ociImage)
-DOCKER_REPOSITORY="docker://seanrmurphy/gh-action-testing"
+OCI_ARCHIVE=$(nix-build --no-out-link -A packages.x86_64-linux.ociApplicationImage)
+DOCKER_REPOSITORY="docker://seanrmurphy/nix-container-build-gha"
 DOCKER_USERNAME="seanrmurphy"
 
 if [ -z ${DOCKER_ACCESS_TOKEN+x} ]; then
