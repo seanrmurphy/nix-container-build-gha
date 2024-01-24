@@ -1,7 +1,7 @@
 # nix-container-build-gha
 
 This is a simple testing repo I used to understand how to build python environments in github actions
-with nix. I wrote up my thoughts on this medium post.
+with nix. I wrote up my thoughts in [this medium post](https://medium.com/@seanrmurphy/building-container-images-using-nix-and-github-actions-ba548ab9080d).
 
 This is the public version of the repo which anyone can look through; I also maintain a private version 
 which is linked to some self hosted github runners - I don't want to link the public version to any such
