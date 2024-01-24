@@ -92,15 +92,16 @@
           packages = [ pythonEnv ];
         };
 
-      # Build our package using `buildPythonPackage
       packages.x86_64-linux = {
         # default is built with `nix build`
         default = pythonPackage;
 
         # built with `nix build .#ociPackageImage`
+        # the result is a gzip'd tarball - it can be imported to docker with `docker load < result` 
         ociPackageImage = buildPackageImage;
 
         # built with `nix build .#ociApplicationImage`
+        # the result is a gzip'd tarball - it can be imported to docker with `docker load < result` 
         ociApplicationImage = buildApplicationImage;
       };
 
